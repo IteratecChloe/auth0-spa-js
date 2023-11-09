@@ -976,6 +976,7 @@ export class Auth0Client {
         ...options.authorizationParams,
         grant_type: 'refresh_token',
         refresh_token: cache && cache.refresh_token,
+        scope: options.authorizationParams.scope,
         redirect_uri,
         ...(timeout && { timeout })
       });
